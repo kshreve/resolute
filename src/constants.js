@@ -1,1 +1,5 @@
-export const API_ROOT = process.env.NODE_ENV === 'production' ? 'https://resolute-test.herokuapp.com/' : 'http://localhost:3000';
+const mongoLabApiKey = '?apiKey=FmIllpfosmgRaRMQtSEVwizeCBTLl2w1';
+
+const API_ROOT = `https://api.mlab.com/api/1/databases/resolute/collections`;
+
+export const USERS = `${API_ROOT}/users${mongoLabApiKey}`;

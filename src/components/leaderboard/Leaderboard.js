@@ -4,48 +4,28 @@ import fetch from 'isomorphic-fetch';
 import 'react-table/react-table.css'
 import './Leaderboard.css'
 
-import { API_ROOT } from '../../constants';
-
-let data = [
-    {
-        name:        'kevin',
-        wins:        0,
-        totalPoints: 0,
-    }, {
-        name:        'paul',
-        wins:        0,
-        totalPoints: 0,
-    }, {
-        name:        'john',
-        wins:        0,
-        totalPoints: 0,
-    }, {
-        name:        'kurt',
-        wins:        0,
-        totalPoints: 0,
-    }, {
-        name:        'zak',
-        wins:        0,
-        totalPoints: 0,
-    }, {
-        name:        'steve',
-        wins:        0,
-        totalPoints: 0,
-    },
-];
+import { USERS } from '../../constants';
 
 class Leaderboard extends Component {
+    state = {
+        users: []
+    };
+
     componentDidMount() {
-        fetch(API_ROOT).then((response) => {
-            console.log(response);
+        fetch(USERS).then((response) => response.json()).then((users) => {
+            this.setState({
+                users
+            });
         });
     }
 
     render() {
+        const { users } = this.state;
+
         return (
             <div>
                 <h2>Leaderboard</h2>
-                <ReactTable data={data}
+                <ReactTable data={users}
                             columns={[
                                 {
                                     Header:   'Name',
