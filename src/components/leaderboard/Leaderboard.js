@@ -22,6 +22,12 @@ class Leaderboard extends Component {
                                 Header:   'Total Points Scored',
                                 accessor: 'totalPoints'
                             }]}
+                            defaultSorted={[
+                                {
+                                    id:   'wins',
+                                    desc: true
+                                }
+                            ]}
                             defaultPageSize={5}/>
             </div>
         );
