@@ -33,6 +33,7 @@ class App extends Component {
                     <Leaderboard users={users}/>
                     <MatchRecorder users={users}/>
                 </div>
+                <div className="footer"/>
             </div>
         );
     }

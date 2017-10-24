@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import NumberPicker from 'react-widgets/lib/NumberPicker'
 import './NumberPicker.css';
 
 class Test extends Component {
     render() {
-        const { label } = this.props;
+        const { label, onChange } = this.props;
 
         return (
             <div className="input">
                 <h4 className="label">{label}</h4>
+                <input type="number" onChange={onChange}/>
             </div>
         );
     }

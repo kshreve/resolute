@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import ReactTable from 'react-table';
 
-import 'react-table/react-table.css'
-import './Leaderboard.css'
+import 'react-table/react-table.css';
+import './Leaderboard.css';
 
 class Leaderboard extends Component {
     render() {
@@ -12,20 +12,16 @@ class Leaderboard extends Component {
             <div>
                 <h2>Leaderboard</h2>
                 <ReactTable data={users}
-                            columns={[
-                                {
-                                    Header:   'Name',
-                                    accessor: 'name',
-                                },
-                                {
-                                    Header:   'Win Total',
-                                    accessor: 'wins'
-                                },
-                                {
-                                    Header:   'Total Points Scored',
-                                    accessor: 'totalPoints'
-                                }
-                            ]}
+                            columns={[{
+                                Header:   'Name',
+                                accessor: 'name',
+                            }, {
+                                Header:   'Win Total',
+                                accessor: 'wins'
+                            }, {
+                                Header:   'Total Points Scored',
+                                accessor: 'totalPoints'
+                            }]}
                             defaultPageSize={5}/>
             </div>
         );
