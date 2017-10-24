@@ -28,11 +28,13 @@ class MatchRecorder extends Component {
             } else {
                 if ( user1Score < user2Score ) {
                     updateUser(user1, user1Score).then(() => {
+                        //noinspection JSCheckFunctionSignatures
                         return updateUser(user2, user2Score, true);
                     }).then(() => {
                         window.location = '/';
                     });
                 } else {
+                    //noinspection JSCheckFunctionSignatures
                     updateUser(user1, user1Score, true).then(() => {
                         return updateUser(user2, user2Score);
                     }).then(() => {
