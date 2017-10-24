@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import ReactTable from 'react-table';
 import 'react-table/react-table.css'
 
+import { API_ROOT } from './constants';
+
 let data = [
     {
         name: 'kevin',
@@ -26,7 +28,7 @@ let data = [
 
 class Leaderboard extends Component {
     componentDidMount() {
-        fetch('http://localhost:3000/').then((response) => {
+        fetch(API_ROOT).then((response) => {
             console.log(response);
         });
     }
