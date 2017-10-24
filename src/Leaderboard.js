@@ -6,23 +6,29 @@ import { API_ROOT } from './constants';
 
 let data = [
     {
-        name: 'kevin',
-        wins: 0
+        name:        'kevin',
+        wins:        0,
+        totalPoints: 0,
     }, {
-        name: 'paul',
-        wins: 0
+        name:        'paul',
+        wins:        0,
+        totalPoints: 0,
     }, {
-        name: 'john',
-        wins: 0
+        name:        'john',
+        wins:        0,
+        totalPoints: 0,
     }, {
-        name: 'kurt',
-        wins: 0
+        name:        'kurt',
+        wins:        0,
+        totalPoints: 0,
     }, {
-        name: 'zak',
-        wins: 0
+        name:        'zak',
+        wins:        0,
+        totalPoints: 0,
     }, {
-        name: 'steve',
-        wins: 0
+        name:        'steve',
+        wins:        0,
+        totalPoints: 0,
     },
 ];
 
@@ -47,6 +53,10 @@ class Leaderboard extends Component {
                         {
                             Header:   'Win Total',
                             accessor: 'wins'
+                        },
+                        {
+                            Header:   'Total Points Scored',
+                            accessor: 'totalPoints'
                         }
                     ]}
                 />
