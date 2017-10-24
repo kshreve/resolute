@@ -3,7 +3,7 @@ import fetch from 'isomorphic-fetch';
 import Promise from 'bluebird';
 
 export const updateUser = (user, score, winner: false) => {
-    if ( user ) {
+    if ( user && user._id && user._id.$oid ) {
         let updateData = {
             name:        user.name,
             wins:        winner ? user.wins + 1 : user.wins,
