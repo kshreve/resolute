@@ -16,3 +16,6 @@
 2. add buildpack `https://github.com/mars/create-react-app-buildpack.git`
 3. Connect to your github repository
 4. Allow automatic deploys from push on master
+
+
+### Live repo located -- https://resolute-test.herokuapp.com/
