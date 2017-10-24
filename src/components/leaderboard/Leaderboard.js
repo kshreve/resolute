@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import ReactTable from 'react-table';
+import fetch from 'isomorphic-fetch';
 import 'react-table/react-table.css'
+import './Leaderboard.css'
 
-import { API_ROOT } from './constants';
+import { API_ROOT } from '../../constants';
 
 let data = [
     {
@@ -43,23 +45,22 @@ class Leaderboard extends Component {
         return (
             <div>
                 <h2>Leaderboard</h2>
-                <ReactTable
-                    data={data}
-                    columns={[
-                        {
-                            Header:   'Name',
-                            accessor: 'name',
-                        },
-                        {
-                            Header:   'Win Total',
-                            accessor: 'wins'
-                        },
-                        {
-                            Header:   'Total Points Scored',
-                            accessor: 'totalPoints'
-                        }
-                    ]}
-                />
+                <ReactTable data={data}
+                            columns={[
+                                {
+                                    Header:   'Name',
+                                    accessor: 'name',
+                                },
+                                {
+                                    Header:   'Win Total',
+                                    accessor: 'wins'
+                                },
+                                {
+                                    Header:   'Total Points Scored',
+                                    accessor: 'totalPoints'
+                                }
+                            ]}
+                            defaultPageSize={5}/>
             </div>
         );
     }

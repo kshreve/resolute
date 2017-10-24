@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 import logo from './resolute.png';
 import './App.css';
-import Leaderboard from './Leaderboard'
+import Leaderboard from './components/leaderboard/Leaderboard'
+import MatchRecorder from './components/matchrecorder/MatchRecorder'
 
 class App extends Component {
     render() {
@@ -12,9 +13,8 @@ class App extends Component {
                     <img src={logo} className="App-logo" alt="logo"/>
                     <h1 className="App-title">Test</h1>
                 </header>
-                <p className="App-intro">
-                    <Leaderboard/>
-                </p>
+                <Leaderboard/>
+                <MatchRecorder/>
             </div>
         );
     }
