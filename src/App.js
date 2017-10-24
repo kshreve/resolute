@@ -4,8 +4,8 @@ import fetch from 'isomorphic-fetch';
 import logo from './resolute.png';
 import './App.css';
 import 'react-widgets/dist/css/react-widgets.css';
-import Leaderboard from './components/leaderboard/Leaderboard'
-import MatchRecorder from './components/matchrecorder/MatchRecorder'
+import Leaderboard from './components/leaderboard/Leaderboard';
+import MatchRecorder from './components/matchrecorder/MatchRecorder';
 import { USERS } from './constants';
 class App extends Component {
     state = {

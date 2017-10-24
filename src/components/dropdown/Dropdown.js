@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DropdownList from 'react-widgets/lib/DropdownList'
+import DropdownList from 'react-widgets/lib/DropdownList';
 import './Dropdown.css';
 
 class Dropdown extends Component {
